@@ -12,6 +12,7 @@ import com.axoul.noght.databinding.FragmentHomeBinding
 import com.axoul.noght.ui.history.HistoryFragment
 import com.axoul.noght.ui.settings.SettingsFragment
 import com.google.android.material.bottomappbar.BottomAppBar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class HomeFragment : Fragment() {
 
@@ -38,6 +39,7 @@ class HomeFragment : Fragment() {
         }
 
         val bottomBar = requireActivity().findViewById<BottomAppBar>(R.id.bottomAppBar)
+        bottomBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
         bottomBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_history -> {
@@ -51,6 +53,12 @@ class HomeFragment : Fragment() {
                 else -> false
             }
         }
+
+        val fab = requireActivity().findViewById<FloatingActionButton>(R.id.fab)
+        fab.setOnClickListener {
+            // TODO
+        }
+
         return root
     }
 
