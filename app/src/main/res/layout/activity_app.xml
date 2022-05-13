@@ -20,21 +20,22 @@
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
+        style="@style/Theme.Noght"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        style="@style/Widget.Material3.BottomAppBar"
-        app:menu="@menu/bottom_nav_menu"
         app:fabAlignmentMode="center"
-        app:hideOnScroll="true" />
+        app:fabAnimationMode="slide"
+        app:hideOnScroll="true"
+        app:menu="@menu/bottom_nav_menu" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
+        style="@style/Theme.Noght"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="TODO"
         app:layout_anchor="@id/bottomAppBar"
-        app:fabAlignmentMode="center"
-        app:srcCompat="@drawable/ic_baseline_bedtime_24"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/ic_baseline_bedtime_24" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

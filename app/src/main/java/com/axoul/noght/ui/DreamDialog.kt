@@ -24,4 +24,8 @@ class DreamDialog: DialogFragment() {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         return dialog
     }
+
+    override fun getTheme(): Int {
+        return R.style.FullScreenDialog
+    }
 }
