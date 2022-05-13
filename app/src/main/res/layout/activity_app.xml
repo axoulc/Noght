@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        style="@style/Widget.Material3.BottomAppBar"
         app:menu="@menu/bottom_nav_menu"
         app:fabAlignmentMode="center"
         app:hideOnScroll="true" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         app:layout_anchor="@id/bottomAppBar"
         app:fabAlignmentMode="center"
-        app:srcCompat="@drawable/ic_add_24"
+        app:srcCompat="@drawable/ic_baseline_bedtime_24"
         android:contentDescription="TODO" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

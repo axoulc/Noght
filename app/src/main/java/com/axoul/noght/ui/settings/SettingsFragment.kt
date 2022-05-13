@@ -24,16 +24,16 @@ class SettingsFragment : PreferenceFragmentCompat() {
                         .commit()
                     true
                 }
+
+                R.id.navigation_home -> {
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_view, HomeFragment::class.java, null)
+                        .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
+                        .commit()
+                    true
+                }
                 else -> false
             }
-        }
-
-        val fab = requireActivity().findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_view, HomeFragment::class.java, null)
-                .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
-                .commit()
         }
     }
 }

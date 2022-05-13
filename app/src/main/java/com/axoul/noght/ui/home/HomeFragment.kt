@@ -43,20 +43,21 @@ class HomeFragment : Fragment() {
         bottomBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_history -> {
-                    home2history()
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_view, HistoryFragment::class.java, null)
+                        .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
+                        .commit()
                     true
                 }
                 R.id.navigation_settings -> {
-                    home2settings()
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_view, SettingsFragment::class.java, null)
+                        .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
+                        .commit()
                     true
                 }
                 else -> false
             }
-        }
-
-        val fab = requireActivity().findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener {
-            // TODO
         }
 
         return root
@@ -65,19 +66,5 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun home2history() {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_view, HistoryFragment::class.java, null)
-            .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
-            .commit()
-    }
-
-    private fun home2settings() {
-        requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.nav_view, SettingsFragment::class.java, null)
-            .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_in_left)
-            .commit()
     }
 }
