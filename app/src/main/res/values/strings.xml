@@ -18,4 +18,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="new_dream">New Dream</string>
+    <string name="add_category">Add Keywords</string>
 </resources>
